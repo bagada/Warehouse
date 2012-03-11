@@ -8,7 +8,10 @@
 </head>
 <body>
 <h1>Hola a todos desde aqui empezamos</h1>
-<h2>Hola soy Tere </h2>
-<h2>Pues Hola Tere, Yo soy Marco</h2>
+<h2>Hola soy Tere la ficha roja</h2>
+<h2>Hola soy Jonathan la ficha azul</h2>
+<h2>Marco no vale jajaja</h2>
+<h3>Y nosotros somos parchis chis chis jajjaa</h3>
+<h3>Falto monse la ficha rosa jajaj</h3>
 </body>
 </html>
