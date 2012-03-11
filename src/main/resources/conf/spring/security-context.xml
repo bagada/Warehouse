@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                      http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+
+
+   <security:http auto-config="true" use-expressions="true" access-denied-page="/denied">    
+   	<security:form-login login-page="/login"
+            default-target-url="/login"
+            authentication-failure-url = "/login"
+            always-use-default-target="false"
+            authentication-success-handler-ref="MyAuthenticationSuccessHandler"
+        />		 		
+		<security:intercept-url pattern="/login" access="permitAll" />
+        <security:intercept-url pattern="/secure/**" access="hasRole('ROLE_USER')" />
+        <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"  /> 
+        <security:logout logout-success-url="/login" invalidate-session="true"/>
+        
+        <security:session-management session-fixation-protection="newSession">
+            <!-- To invalidate the current session and to create a new one when a user authenticates -->
+        </security:session-management>
+   </security:http>
+   
+   <security:global-method-security secured-annotations="enabled" pre-post-annotations="enabled"/>	
+ 
+ 
+ 
+    
+    <security:authentication-manager>
+        <security:authentication-provider ref="clusterDaoAuthenticationProvider" user-service-ref="hibernateUserDetailsService">            
+        </security:authentication-provider>
+        
+    </security:authentication-manager>
+   
+   <bean id="loggerListener" class="org.springframework.security.authentication.event.LoggerListener">
+   </bean> 
+   
+   <bean id="MyAuthenticationSuccessHandler"
+          class="com.poliformas.warehouse.web.access.MySavedRequestAwareAuthenticationSuccessHandler">
+        <property name="rolePriority">
+            <map key-type="java.lang.String">
+                <entry>
+                    <key>
+                        <value>ROLE_ADMIN</value>
+                    </key>
+                    <bean class="com.poliformas.warehouse.security.model.RolePriorityUrl">
+                        <!--
+                              role, urlLoginSuccess, priority
+                              -->
+                        <constructor-arg index="0">
+                            <value>ROLE_ADMIN</value>
+                        </constructor-arg>
+                        <constructor-arg index="1">
+                            <value>/admin</value>
+                        </constructor-arg>
+                        <constructor-arg index="2">
+                            <value>1</value>
+                        </constructor-arg>
+                    </bean>
+
+                </entry>
+                <entry>
+                    <key>
+                        <value>ROLE_USER</value>
+                    </key>
+
+                    <!--
+                              role, urlLoginSuccess, priority
+                              -->
+                    <bean class="com.poliformas.warehouse.security.model.RolePriorityUrl">
+                        <constructor-arg index="0">
+                            <value>ROLE_USER</value>
+                        </constructor-arg>
+                        <constructor-arg index="1">
+                            <value>/secure/home</value>
+                        </constructor-arg>
+                        <constructor-arg index="2">
+                            <value>2</value>
+                        </constructor-arg>
+                    </bean>
+                </entry>
+            </map>
+        </property>
+    </bean>
+	   
+    
+</beans>
+
+
+
+
