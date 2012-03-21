@@ -1,4 +1,4 @@
-package com.poliformas.warehouse.entity;
+package com.poliformas.warehouse.integration.entity;
 
 import java.sql.Date;
 
@@ -12,7 +12,7 @@ import javax.persistence.Column;
 @Entity
 @Table(name="WAREHOUSE_COMPONENTS")
 
-public class Components {
+public class Component {
 	
 	@Id
 	@Column(name="ID_Component")

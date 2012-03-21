@@ -1,4 +1,4 @@
-package com.poliformas.warehouse.entity;
+package com.poliformas.warehouse.integration.entity;
 
 import java.sql.Date;
 
@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name= "WHAREHOUSE_WHAREHOUSE")
 
-public class Properties { 
+public class Property { 
 	@Id
 	@Column(name ="ID_PROPERTIES")
 	@GeneratedValue

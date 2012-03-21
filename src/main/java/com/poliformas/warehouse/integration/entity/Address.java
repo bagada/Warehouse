@@ -1,4 +1,4 @@
-package com.poliformas.warehouse.entity;
+package com.poliformas.warehouse.integration.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

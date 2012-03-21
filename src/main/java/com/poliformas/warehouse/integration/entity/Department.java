@@ -1,4 +1,4 @@
-package com.poliformas.warehouse.entity;
+package com.poliformas.warehouse.integration.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import javax.persistence.Column;
 
 @Entity
 @Table(name = "WAREHOUSE_DEPARTMENTS")
-public class Departments {
+public class Department {
 	
 	@Id
 	@Column (name = "ID_Department")
