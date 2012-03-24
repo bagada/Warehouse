@@ -40,7 +40,7 @@
 				<value>com.poliformas.warehouse.integration.entity.Authority</value>
 				<value>com.poliformas.warehouse.integration.entity.UserPassword</value>
 				<value>com.poliformas.warehouse.integration.entity.Mark</value>
-				
+				<value>com.poliformas.warehouse.integration.entity.Department</value>
 			</list>
 		</property>
 	</bean>

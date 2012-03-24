@@ -12,8 +12,8 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import com.poliformas.warehouse.integration.dao.UserDAO;
 import com.poliformas.warehouse.integration.entity.User;
 
-
 public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
+
 	
 	
 	public void saveUser(User user){ 
