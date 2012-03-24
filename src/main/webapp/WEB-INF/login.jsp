@@ -4,8 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!--<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -35,67 +34,46 @@ a.linkopacity:hover img {
 </head>
 <body >
  <h1 align="center">BIENVENIDOS A POLIFORMAS</h1>
-<!--
+
 <a class="linkopacity" href="#" title="Enlace 1" >
 
-<img src="http://www.poliformasplasticas.com.mx/2011/jpg/fondo_columna.jpg" alt="Imagen 1"></a>-->
-
-<p>
-            <strong>
-                Login
-            </strong>
-        </p>
-        
-     ${fn:replace(SPRING_SECURITY_LAST_EXCEPTION.message, 'Bad credentials', 'Username/Password are incorrect')}
-        <c:if test="${not empty error}">
-		<div class="errorblock">
-		   
-		</div>
-	</c:if>
-
-        <fieldset>
-            <table border="0">
-                <form:form modelAttribute="loginForm"  method="post" autocomplete="off">
-                    <tbody>
-                        <tr>
-                            <td colspan="3" align="center">
-                                <form:errors path="commonError_1">
-                                    error
-                                </form:errors>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><form:label id="userNameLabel" for="j_username" path="j_username" cssClass="error">UserName</form:label></td>
-                            <td>
-                                <form:input path="j_username" />
-                            </td>
-                            <td>
-                                <form:errors path="j_username" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><form:label id="passwordLabel" for="j_password" path="j_password" cssClass="error">Password</form:label></td>
-                            <td>
-                                <form:password path="j_password" />
-                            </td>
-                            <td>
-                                <form:errors path="j_password"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td align="center" colspan="2">
-                                <input type="submit" value="Enter" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </form:form>
-                    </table>
-        </fieldset>
+<img src="http://www.poliformasplasticas.com.mx/2011/jpg/fondo_columna.jpg" alt="Imagen 1"></a>
 
 <a class="linkopacity" href="#" title="Enlace 3" >
 <img src="http://profile.ak.fbcdn.net/hprofile-ak-snc4/274275_100001392390082_1810171003_n.jpg" alt="Imagen 3"></a>
+-->
 
- 
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Poliformas Warehouse</title>
+	
+	<link rel="stylesheet" href="resources/css/login.css" type="text/css" media="screen" />
+</head>
+
+<body>
+
+
+<form:form id="login" modelAttribute="loginForm"  method="post" autocomplete="off">
+    <h1>Inciar</h1>
+    <fieldset id="inputs">
+        <form:input id="username" path="j_username"  placeholder="Username" autofocus="true" required="true"/>   
+        <form:password   path="j_password"  id="password" placeholder="Password" required="true"/>
+    </fieldset>
+    <fieldset id="actions">
+        <input type="submit" id="submit" value="Log in">
+        <!--  <a href="">Forgot your password?</a><a href="">Register</a>-->
+        ${fn:replace(SPRING_SECURITY_LAST_EXCEPTION.message, 'Bad credentials', 'Username/Password are incorrect')}
+    </fieldset>
+  <!--    <a href="http://www.red-team-design.com/slick-login-form-with-html5-css3" id="back">Back to article...</a>-->
+</form:form>
+
+<!-- BSA AdPacks code -->
+<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+
 
 </body>
 </html>
+
+    

@@ -16,7 +16,7 @@ import com.poliformas.warehouse.integration.entity.User;
 public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 	
 	
-	public void saveUser(User user){
+	public void saveUser(User user){ 
 		getHibernateTemplate().save(user);
 	}
 	

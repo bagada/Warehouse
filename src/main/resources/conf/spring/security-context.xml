@@ -13,10 +13,11 @@
             authentication-failure-url = "/login"
             always-use-default-target="false"
             authentication-success-handler-ref="MyAuthenticationSuccessHandler"
-        />		 		
-		<security:intercept-url pattern="/login" access="permitAll" />
+        />		 	
+		<security:intercept-url pattern="/login" access="permitAll"  />
         <security:intercept-url pattern="/secure/**" access="hasRole('ROLE_USER')" />
         <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"  /> 
+        <security:intercept-url pattern="/resources/**" filters="none"/>
         <security:logout logout-success-url="/login" invalidate-session="true"/>
         
         <security:session-management session-fixation-protection="newSession">

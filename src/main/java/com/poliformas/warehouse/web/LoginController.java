@@ -19,7 +19,7 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(ModelMap model) {
 		System.out.println("------------------------algo--");
-		model.addAttribute(new LoginForm());
+		model.addAttribute("loginForm",new LoginForm());
 
 		return "/login";
 	}
@@ -58,11 +58,26 @@ public class LoginController {
 		return "login";
 
 	}
-
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String redirect(Model model) {
-		return "login";
+	public String inicio(ModelMap model) {
+		System.out.println("------------------------algo--");
+		model.addAttribute("loginForm",new LoginForm());
+
+		return "/login";
 	}
+	@RequestMapping(value = "/", method = RequestMethod.POST)
+	public String inicio(@Valid LoginForm loginForm, BindingResult result,
+			HttpServletRequest request) {
+		if (result.hasErrors()) {
+			System.out.println("---------------------+++++++");
+
+			return "/login";
+		}
+		System.out.println("la bombaaaaa");
+		return "forward:j_spring_security_check";
+	}
+
+
 
 
 }
