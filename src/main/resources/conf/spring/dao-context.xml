@@ -41,6 +41,8 @@
 				<value>com.poliformas.warehouse.integration.entity.UserPassword</value>
 				<value>com.poliformas.warehouse.integration.entity.Mark</value>
 				<value>com.poliformas.warehouse.integration.entity.Department</value>
+				<value>com.poliformas.warehouse.integration.entity.Equipment</value>
+
 			</list>
 		</property>
 	</bean>
