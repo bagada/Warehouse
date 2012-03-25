@@ -79,7 +79,7 @@
 	<bean id="clusterDaoAuthenticationProvider"
           class="com.poliformas.warehouse.integration.dao.WarehouseDaoAuthenticationProvider">
         <property name="userDetailsService" ref="hibernateUserDetailsService"/>
-      <!-- <property name="passwordEncoder" ref="md5"/> -->  
+       <property name="passwordEncoder" ref="md5"/> 
     </bean>
     <bean id="md5"
           class="org.springframework.security.authentication.encoding.Md5PasswordEncoder">
