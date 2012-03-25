@@ -19,5 +19,6 @@ public class PropertyDAOImpl extends HibernateDaoSupport implements PropertyDAO{
 		getHibernateTemplate().delete(property);
 		}
 		public Property findProperty(Property property) { 	
-	return (Property)getHibernateTemplate().find(String.valueOf(property.getIdProperty)).get(0);
+	return (Property)getHibernateTemplate().find(String.valueOf(property.getIdproperties())).get(0);
 	}
+}
