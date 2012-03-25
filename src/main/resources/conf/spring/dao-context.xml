@@ -43,6 +43,8 @@
 				<value>com.poliformas.warehouse.integration.entity.Department</value>
 				<value>com.poliformas.warehouse.integration.entity.Equipment</value>
 				<value>com.poliformas.warehouse.integration.entity.Property</value>
+				<value>com.poliformas.warehouse.integration.entity.Employee</value>
+				
 			</list>
 		</property>
 	</bean>

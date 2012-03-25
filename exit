@@ -1,0 +1,83 @@
+[33mcommit 2d6c2b35df65c879b5200fbe80fb5103cfb30234[m
+Author: Marco Antonio Lara <marko.lara10@gmail.com>
+Date:   Sun Mar 11 16:39:52 2012 -0600
+
+    updated db_create.sql
+
+[33mcommit af7debfd16c3581a1f7447c246c2d7dbc8195ef9[m
+Author: Teresa Duarte <tereds15@gmail.com>
+Date:   Sun Mar 11 16:14:03 2012 -0600
+
+    modified pom.xml
+
+[33mcommit 3dc320dda905751ae04a5263833dff9f61c1b984[m
+Author: Jonathan Landin Zaragoza <jonathan.gits@gmail.com>
+Date:   Sun Mar 11 12:22:02 2012 -0600
+
+    My first commit
+
+[33mcommit 959766f9500b0de9d9c00a526dcc0224dcb67bd5[m
+Author: Juan Antonio <juanbusines@gmail.com>
+Date:   Fri Mar 9 02:26:52 2012 -0600
+
+    Added spring framework
+
+[33mcommit 28070cfc79190b99592a2336e6a58e4a1f36e710[m
+Author: Marco Antonio Lara <marko.lara10@gmail.com>
+Date:   Sun Mar 4 15:29:28 2012 -0600
+
+    Test
+
+[33mcommit a41e554561175677348c2baf0225013eaa2f01a9[m
+Author: Teresa Duarte <tereds15@gmail.com>
+Date:   Sun Mar 4 15:20:07 2012 -0600
+
+    Fix package
+
+[33mcommit dec15bf7708a2f9e55fdede984dba023142c7629[m
+Author: Teresa Duarte <tereds15@gmail.com>
+Date:   Sun Mar 4 14:53:56 2012 -0600
+
+    My First Commit
+
+[33mcommit 2d3b9db38dd17895d620daf8459b1e365781f6f6[m
+Author: Juan Antonio <juanbusines@gmail.com>
+Date:   Sun Mar 4 14:43:05 2012 -0600
+
+    Ultimate fix
+
+[33mcommit 521f84afe865471669ee35e040572c862e32e81c[m
+Author: Juan Antonio <juanbusines@gmail.com>
+Date:   Sun Mar 4 14:25:31 2012 -0600
+
+    Added package
+
+[33mcommit 02751731154702ff1ac16ba637cad519e39d12de[m
+Author: Juan Antonio <juanbusines@gmail.com>
+Date:   Sun Mar 4 14:06:24 2012 -0600
+
+    Other fix
+
+[33mcommit d68ba9948c988f8ee5c717886891d22649cca19c[m
+Author: Juan Antonio <juanbusines@gmail.com>
+Date:   Sun Mar 4 13:56:47 2012 -0600
+
+    Fix proyect
+
+[33mcommit ef88e7c388001c00f4563f91199c48cec32a69a4[m
+Author: Juan Antonio <juanbusines@gmail.com>
+Date:   Sun Mar 4 11:07:11 2012 -0600
+
+    Welcome everybody
+
+[33mcommit ce02db2b657237e6372e1f44044d48495a418868[m
+Author: Juan Antonio <juanbusines@gmail.com>
+Date:   Sun Mar 4 10:54:35 2012 -0600
+
+    Added proyect
+
+[33mcommit b3734866a77097ecbd54087ea4f674e3d03ed609[m
+Author: Juan Antonio <juanbusines@gmail.com>
+Date:   Sun Mar 4 10:40:17 2012 -0600
+
+    First commit
