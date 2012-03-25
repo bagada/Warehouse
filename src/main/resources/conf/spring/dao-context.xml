@@ -42,7 +42,7 @@
 				<value>com.poliformas.warehouse.integration.entity.Mark</value>
 				<value>com.poliformas.warehouse.integration.entity.Department</value>
 				<value>com.poliformas.warehouse.integration.entity.Equipment</value>
-
+				<value>com.poliformas.warehouse.integration.entity.Property</value>
 			</list>
 		</property>
 	</bean>
