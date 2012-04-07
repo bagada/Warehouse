@@ -3,12 +3,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
+	<bean id="userService" class="com.poliformas.warehouse.service.impl.UserServiceImpl" />
+	
+	<bean id="userPasswordService" class="com.poliformas.warehouse.service.impl.UserPasswordServiceImpl" />
+	
+	<bean id="auhorityService" class="com.poliformas.warehouse.service.impl.AuthorityServiceImpl" />
 	
 	
-	<!-- Root Context: defines shared resources visible to all other web components -->
-	<import resource="dao-context.xml"/>
-	<import resource="service-context.xml"/>
-	<import resource="security-context.xml"/>
-	<import resource="web-context.xml"/>
-		
 </beans>

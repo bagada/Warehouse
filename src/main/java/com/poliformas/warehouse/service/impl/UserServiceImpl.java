@@ -8,7 +8,6 @@ import com.poliformas.warehouse.service.UserService;
 
 public class UserServiceImpl  implements UserService{
 
-	
 	@Autowired
 	private UserDAO userDAO;
 	

@@ -18,10 +18,15 @@ public class LoginController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(ModelMap model) {
-		System.out.println("------------------------algo--");
+		System.out.println("------------------------algo mas--");
 		model.addAttribute("loginForm",new LoginForm());
 
 		return "/login";
+	}
+	
+	@RequestMapping(value = "/a", method = RequestMethod.GET)
+	public String logins(ModelMap model) {
+		return "/prueba";
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)

@@ -15,9 +15,11 @@ import com.poliformas.warehouse.integration.entity.User;
 public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 
 	
-	
-	public void saveUser(User user){ 
-		getHibernateTemplate().save(user);
+	public void saveUser(final User user){ 
+		System.out.println(user);
+		System.out.println(getHibernateTemplate());
+			getHibernateTemplate().save(user);
+		
 	}
 	
 	public void updateUser(User user){
@@ -25,6 +27,8 @@ public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 	}	
 	
 	public User findUser(final String username,final String password){
+		
+		System.out.println("...............1.........." + getHibernateTemplate());
 		User user = (User)getHibernateTemplate().execute(new HibernateCallback<User>() {			
 			public User doInHibernate(Session session) throws HibernateException, SQLException {				
 				Criteria c = session.createCriteria(User.class);				
@@ -39,6 +43,7 @@ public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 	
 	
 	public User findByUsername(final String username){
+		System.out.println("..............2..........." + getHibernateTemplate());
 		User user = (User)getHibernateTemplate().execute(new HibernateCallback<User>() {			
 			public User doInHibernate(Session session) throws HibernateException, SQLException {				
 				Criteria c = session.createCriteria(User.class);				
@@ -53,6 +58,7 @@ public class UserDAOImpl extends HibernateDaoSupport implements UserDAO {
 	
 	public User getUserByUsername(final String username){
 		System.out.println("recibe username "+username);
+		System.out.println("..........3..............." + getHibernateTemplate());
 		User user = (User)getHibernateTemplate().execute(new HibernateCallback<User>() {			
 			public User doInHibernate(Session session) throws HibernateException, SQLException {
 				System.out.println("------------------------------------------");
