@@ -29,7 +29,7 @@ public class MarkDAOImpl extends HibernateDaoSupport implements MarkDAO{
         getHibernateTemplate().delete(mark);
     }
     
-    public Mark findMark(Mark mark){
-       return (Mark)getHibernateTemplate().find(mark.getName()).get(0);
+    public Mark findMark(Integer idMark){
+       return (Mark)getHibernateTemplate().get(Mark.class, idMark);
     }
 }
