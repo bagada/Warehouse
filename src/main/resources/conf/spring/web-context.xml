@@ -13,7 +13,6 @@
 	
 	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">  
     <beans:property name="basenames" value="classpath:/messages/messages" />  
-    
       
 </beans:bean>
 	

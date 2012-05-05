@@ -43,38 +43,34 @@ public class UserController {
 	public String registerNewUser(@Valid UserForm userForm,  BindingResult result,
 			Model model, HttpSession session){
 		if (result.hasErrors()) {
-			model.addAttribute("fechaHoy", new Date());
+			
 			System.out.println("------------error--------------");
             return "/registerUser";
 		}else{
-			System.out.println("--------------------------");
-			try {
-				System.out.println("--------------------------");
+			try {	
 			User user = new User();
 		
 			user.setUsername(userForm.getname());
 			System.out.println(user.getUsername());
-			user.setEmail("ffff");
+			user.setEmail("correo@correo.com");
 			user.setEnabled(true);
-			System.out.println("--------------------------");
-			try{
+			
 					userService.saveUser(user);
 			
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-			System.out.println("--------------------------");
+			
 			
 			UserPassword userPassword = new UserPassword();
 			userPassword.setIdUser(String.valueOf(user.getIdUser()));
 			userPassword.setPassword(userForm.getPassword());
 			userPasswordService.saveUserPassword(userPassword);
 			
+			
 			Authority authority = new Authority();
 			authority.setIdUser(user.getIdUser());
 			authority.setAuthority(userForm.getRole());
 			AuthorityService.saveAuthority(authority);
-				return "/login";
+			
+				return "/prueba";
 			} catch (Exception e) {
 				model.addAttribute("error", "userAlreadyExist");
 				return "/registerUser";
