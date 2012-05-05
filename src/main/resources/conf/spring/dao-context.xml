@@ -90,6 +90,5 @@
             <property name="hibernateTemplate" ref="hibernateTemplate"/>
        </bean>
     
-
 	
 </beans>

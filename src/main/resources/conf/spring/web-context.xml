@@ -13,7 +13,7 @@
 	
 	<beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">  
     <beans:property name="basenames" value="classpath:/messages/messages" />  
-    <beans:property name="cacheSeconds" value="0" />
+    
       
 </beans:bean>
 	
@@ -29,5 +29,18 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
+<beans:bean
+               class="org.springframework.web.servlet.view.tiles2.TilesViewResolver">
+               <beans:property name="order" value="1" />
+       </beans:bean>
+       <beans:bean
+               class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+               <beans:property name="definitions">
+                       <beans:list>
+                               <beans:value>classpath:conf/spring/tiles-defs.xml</beans:value>
+                       </beans:list>
+               </beans:property>
+</beans:bean>
+		
 		
 </beans:beans>

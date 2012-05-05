@@ -13,17 +13,17 @@ import javax.persistence.Column;
 public class Equipment {
 
 	@Id
-	@Column(name="ID_Equipment")
+	@Column(name="ID_EQUIPMENT")
 	@GeneratedValue
 	private int IdEquipment;
 	
-	@Column(name="ID_Department")
+	@Column(name="ID_DEPARTMENT")
 	private int IdDepartment;
 	
-	@Column(name="ID_Branch")
+	@Column(name="ID_BRANCH")
 	private int IdBranch;
 	
-	@Column(name="ID_Mark")
+	@Column(name="ID_MARK")
 	private int IdMark;
 
 	public int getIdEquipment() {
