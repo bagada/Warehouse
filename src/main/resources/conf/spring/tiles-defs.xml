@@ -20,4 +20,9 @@
       <put-attribute name="body"   value="/WEB-INF/office.jsp"/>      
   </definition>
   
+  <definition name="registerMark" extends="baseLayout">
+      <put-attribute name="title"  value="registerMark"/>
+      <put-attribute name="body"   value="/WEB-INF/registerMark.jsp"/>      
+  </definition>
+  
 </tiles-definitions>

@@ -56,7 +56,7 @@
                 </td>
             </tr>
             <tr>
-                <td width="10%;">
+                <td width="23%;">
                 <tiles:insertAttribute name="menu" />
                     
                 </td>

@@ -9,5 +9,7 @@
 	
 	<bean id="auhorityService" class="com.poliformas.warehouse.service.impl.AuthorityServiceImpl" />
 	
+	<bean id="markService" class="com.poliformas.warehouse.service.impl.MarkServiceImpl" />
+	
 	
 </beans>

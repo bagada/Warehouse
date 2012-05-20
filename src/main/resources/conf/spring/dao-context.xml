@@ -63,6 +63,10 @@
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
 	
+	<bean id="markDAO" class="com.poliformas.warehouse.integration.dao.impl.MarkDAOImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
 	<bean id="authorityDAO" class="com.poliformas.warehouse.integration.dao.impl.AuthorityDAOImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
