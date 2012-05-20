@@ -25,4 +25,9 @@
       <put-attribute name="body"   value="/WEB-INF/registerMark.jsp"/>      
   </definition>
   
+   <definition name="equipment" extends="baseLayout">
+      <put-attribute name="title"  value="Equipment"/>
+      <put-attribute name="body"   value="/WEB-INF/equipment.jsp"/>      
+  </definition>
+
 </tiles-definitions>

@@ -12,7 +12,7 @@ import com.poliformas.warehouse.integration.entity.Equipment;
 @Controller
 public class EquipmentController {
 	
-	@RequestMapping(value = "/equipment", method = RequestMethod.GET)
+	@RequestMapping(value = "/equipment.htm", method = RequestMethod.GET)
 	public String login(ModelMap model) {
 	//	System.out.println("------------------------algo mas--");
 	//	model.addAttribute("loginForm",new LoginForm());

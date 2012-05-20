@@ -13,11 +13,29 @@
 <tr>
 <td align="left" width="200">Id Marca:
 </td>
-<td align="center"width=200"><input name="mail" maxlength="30" type="TEXT" value="">
+<td>
+<select name="categorias">
+    <optgroup label="fruta">
+    <option value="1">naranja</option>
+    <option value="2">fresas</option>
+    <option value="3">peras</option>
+    </optgroup>
+    <optgroup label="verduras">
+    <option value="1">zapallo</option>
+    <option value="2">habas</option>
+    </optgroup>
+    <optgroup label="carnes">
+    <option value="1">pollo</option>
+    <option value="2">pescado</option>
+    <option value="3">cerdo</option>
+    </optgroup>
+</select>
 </td>
 <td align="center" width="200"><INPUT NAME="boton" TYPE="SUBMIT" VALUE="Buscar"> 
 </td>
 </tr>
+
+</table>
 </form>
 </body>
 </html>
