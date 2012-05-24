@@ -67,6 +67,10 @@
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
 	
+	<bean id="equipmentDAO" class="com.poliformas.warehouse.integration.dao.impl.EquipmentDAOImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
 	<bean id="authorityDAO" class="com.poliformas.warehouse.integration.dao.impl.AuthorityDAOImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>

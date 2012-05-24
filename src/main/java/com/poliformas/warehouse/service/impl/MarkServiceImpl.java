@@ -1,5 +1,7 @@
 package com.poliformas.warehouse.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.poliformas.warehouse.integration.dao.MarkDAO;
@@ -25,6 +27,10 @@ public class MarkServiceImpl implements MarkService{
 
 	public Mark findMark(Integer idMark) {
 		return markDAO.findMark(idMark);
+	}
+
+	public List<Mark> getAll() {
+		return markDAO.getAll();
 	}
 
 

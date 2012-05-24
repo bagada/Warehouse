@@ -11,5 +11,5 @@
 	
 	<bean id="markService" class="com.poliformas.warehouse.service.impl.MarkServiceImpl" />
 	
-	
+	<bean id="equipmentService" class="com.poliformas.warehouse.service.impl.EquipmentServiceImpl" />
 </beans>
