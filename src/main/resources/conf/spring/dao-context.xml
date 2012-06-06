@@ -40,6 +40,7 @@
 				<value>com.poliformas.warehouse.integration.entity.Authority</value>
 				<value>com.poliformas.warehouse.integration.entity.UserPassword</value>
 				<value>com.poliformas.warehouse.integration.entity.Mark</value>
+				<value>com.poliformas.warehouse.integration.entity.Company</value>
 				<value>com.poliformas.warehouse.integration.entity.Department</value>
 				<value>com.poliformas.warehouse.integration.entity.Equipment</value>
 				<value>com.poliformas.warehouse.integration.entity.Property</value>
@@ -67,8 +68,14 @@
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
 	
+
 	<bean id="equipmentDAO" class="com.poliformas.warehouse.integration.dao.impl.EquipmentDAOImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+
+	<bean id="companyDAO" class="com.poliformas.warehouse.integration.dao.impl.CompanyDAOImpl">
+	<property name="hibernateTemplate" ref="hibernateTemplate"/>
+
 	</bean>
 	
 	<bean id="authorityDAO" class="com.poliformas.warehouse.integration.dao.impl.AuthorityDAOImpl">

@@ -4,49 +4,48 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.poliformas.warehouse.integration.entity.Mark;
-import com.poliformas.warehouse.service.MarkService;
-import com.poliformas.warehouse.web.forms.MarkForm;
+import com.poliformas.warehouse.integration.entity.Company;
+import com.poliformas.warehouse.service.CompanyService;
+import com.poliformas.warehouse.web.forms.CompanyForm;
 
-@Controller
-public class MarkController {
+public class CompanyController {
 	@Autowired
-	private MarkService markService;
+	private CompanyService companyService;
 
-	@RequestMapping(value = "/registerMark.htm", method = RequestMethod.GET)
+	@RequestMapping(value = "/registerCompany.htm", method = RequestMethod.GET)
 	public String registerMark(ModelMap model) {
 		System.out.println("------------------------algo mas--");
-		 model.addAttribute("markForm",new MarkForm());
+		 model.addAttribute("CompanyForm",new CompanyForm());
 
-		return "registerMark";
+		return "companyMark";
 	}
 	
-	@RequestMapping(value="/registerMark.htm", method=RequestMethod.POST)
-	public String registerNewUser(@Valid MarkForm markrForm,  BindingResult result,
+	@RequestMapping(value="/registerCompany.htm", method=RequestMethod.POST)
+	public String registerNewUser(@Valid CompanyForm companyForm,  BindingResult result,
 			Model model, HttpSession session){
 		if (result.hasErrors()) {
 			
 			System.out.println("------------error--------------");
-            return "/registerMark.htm";
+            return "/registerCompany.htm";
 		}else{
 			try {	
 				
-				Mark mark = new Mark();
+				Company company = new Company();
 				
-				mark.setName(markrForm.getName());
-				markService.saveMark(mark);
+				company.setName(companyForm.getName());
+				companyService.saveCompany(company);
+				
 				
 				return "/prueba";
 			} catch (Exception e) {
 				model.addAttribute("error", "userAlreadyExist");
-				return "/registerMark.htm";
+				return "/companyMark.htm";
 			}
 		}
 			

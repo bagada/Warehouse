@@ -4,13 +4,13 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import com.poliformas.warehouse.web.forms.MarkForm;
+import com.poliformas.warehouse.web.forms.CompanyForm;
 
-public class MarkFormValidator implements Validator{
+public class CompanyFormValidator implements Validator{
         
         public boolean supports(Class<?> clazz){
                 
-                return MarkForm.class.equals(clazz);
+                return CompanyForm.class.equals(clazz);
                 }
                 public void validate(Object target, Errors errors){
                         
