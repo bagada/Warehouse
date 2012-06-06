@@ -2,14 +2,15 @@ package com.poliformas.warehouse.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.poliformas.warehouse.integration.dao.EmployeeDAO;
 import com.poliformas.warehouse.integration.entity.Employee;
 import com.poliformas.warehouse.service.EmployeeService;
 
 
 public class EmployeeServiceImpl implements EmployeeService{
 	
-@Autowired
-	private EmployeeService employeeDAO;
+	@Autowired
+	private EmployeeDAO employeeDAO;
 
 	public void saveEmployee(Employee employee) {
 		employeeDAO.saveEmployee(employee);

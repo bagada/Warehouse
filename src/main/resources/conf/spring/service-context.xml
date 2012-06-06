@@ -9,7 +9,11 @@
 	
 	<bean id="auhorityService" class="com.poliformas.warehouse.service.impl.AuthorityServiceImpl" />
 	
+<<<<<<< HEAD
 	<bean id="markService" class="com.poliformas.warehouse.service.impl.MarkServiceImpl" />
 	
 	<bean id="equipmentService" class="com.poliformas.warehouse.service.impl.EquipmentServiceImpl" />
+=======
+	<bean id="employeeService" class="com.poliformas.warehouse.service.impl.EmployeeServiceImpl" />
+>>>>>>> Added registeraddress
 </beans>

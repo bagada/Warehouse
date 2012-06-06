@@ -114,7 +114,7 @@
 	<bean id="employeeDAO" class="com.poliformas.warehouse.integration.dao.impl.EmployeeDAOImpl">
                <property name="hibernateTemplate" ref="hibernateTemplate"/>
        </bean>
-	<bean id="employeeService" class="com.poliformas.warehouse.service.impl.EmployeeServiceImpl" />
+	
 	
 </beans>
 

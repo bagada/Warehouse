@@ -13,52 +13,48 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.poliformas.warehouse.integration.entity.Employee;
-import com.poliformas.warehouse.service.EmployeeService;
-import com.poliformas.warehouse.web.forms.RegisterEmployeeForm;
-import com.poliformas.warehouse.web.validator.EmployeeFormValidator;
+import com.poliformas.warehouse.integration.entity.Address;
+import com.poliformas.warehouse.service.AddressService;
+import com.poliformas.warehouse.web.forms.RegisterAddressForm;
+import com.poliformas.warehouse.web.validator.AddressFormValidator;
 
 @Controller
-public class EmployeeCotroller {
+public class AddressController {
 	
 	@Autowired
-	private EmployeeService employeeService;
+	private AddressService addressService;
+	
 	@InitBinder
     protected void initBinder(WebDataBinder binder){
-            binder.setValidator(new EmployeeFormValidator());
+            binder.setValidator(new AddressFormValidator());
     }
 	
-	@RequestMapping(value = "/registerEmployee", method = RequestMethod.GET)
+	@RequestMapping(value = "/registerAddress", method = RequestMethod.GET)
 	public String login(ModelMap model) {
 		System.out.println("------------------------algo--");
-		model.addAttribute("RegisterEmployeeForm",new RegisterEmployeeForm());
+		model.addAttribute("RegisterAddressForm",new RegisterAddressForm());
 
-		return "/registerEmployee";
+		return "/registerAddress";
 	}
 	
-	@RequestMapping(value = "/registerEmployee", method = RequestMethod.POST)
-	public String create(@Valid RegisterEmployeeForm regiterEmployeeForm, BindingResult result,
+	@RequestMapping(value = "/registerAddress", method = RequestMethod.POST)
+	public String create(@Valid RegisterAddressForm regiterEmployeeForm, BindingResult result,
 			Model model, HttpSession session) {
 		if (result.hasErrors()) {
 			System.out.println("---------------------+++++++");
 
-			return "/registerEmployee";
+			return "/registerAddress";
 		}else{
 			try{
-				Employee employee= new Employee();
+				Address address = new Address();
 				
-				employee.setName(regiterEmployeeForm.getName());
-				
-				employeeService.saveEmployee(employee);
-				return "/prueba";
+				address.setIdAddress(Integer.parseInt(RegisterAddressForm.));
+				address.setState()
 				
 			}catch(Exception e){
 				System.out.println("---------------------");
 			model.addAttribute("error", "userAlreadyExist");
-			return "registerEmployee";
+			return "registerAddress";
 			}
 		}
 	}
-	
-
-}
